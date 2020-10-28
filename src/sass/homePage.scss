@@ -1,4 +1,164 @@
 .homePage {
-  font-size: 20px;
-  color: blue;
+  padding-bottom: 20px;
+
+  &__search-form {
+    width: 100%;
+    display: flex;
+    margin: 20px auto 0;
+    justify-content: center;
+    box-shadow: 0px 5px 9px 1px rgba(0, 0, 0, 0.23);
+    margin-bottom: 30px;
+  }
+  &__icon {
+    width: 17px;
+    height: 17px;
+    fill: #000000;
+  }
+  &__input-container {
+    text-align: center;
+    padding-top: 20px;
+    margin: 0 auto;
+    padding-bottom: 24px;
+
+    &::after {
+      content: '';
+      border-bottom: 2px solid #c7c4c4;
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__input {
+    text-align: center;
+    border: none;
+    outline: none;
+    width: 260px;
+
+    &::placeholder {
+      color: #000000;
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+
+  &__movieList {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto 28px;
+  }
+
+  &__movieItem {
+    border-radius: 10px;
+    width: 300px;
+    height: 156px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    background-color: palevioletred;
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0px;
+      position: relative;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &-name {
+      position: absolute;
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 500;
+      z-index: 10;
+      bottom: 14px;
+      left: 12px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__btn {
+    cursor: pointer;
+    color: #556270;
+    display: block;
+    padding: 14px 22px 14px 22px;
+    border: 1px solid rgb(221, 221, 221);
+    box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.004);
+    border-radius: 5px;
+    font-size: 22px;
+    margin-right: 16px;
+    font-weight: 700;
+    background-color: #f2f2f2;
+    &--next {
+      margin-right: 0;
+    }
+  }
+}
+
+// &-img {
+//   border-radius: 10px;
+//   position: relative;
+// }
+
+// &-name {
+//   position: absolute;
+//   color: #ffffff;
+//   font-size: 12px;
+//   font-weight: 500;
+//   z-index: 10;
+//   bottom: 14px;
+//   left: 12px;
+// }
+
+@media (min-width: 768px) {
+  .homePage {
+    &__movieList {
+      margin-bottom: 20px;
+    }
+
+    &__movieItem {
+      margin: 0 12px 14px;
+      width: 350px;
+
+      &:nth-last-child(-n + 2) {
+        margin-bottom: 0;
+      }
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+
+      // &-name {
+      //   font-size: 15px;
+      // }
+    }
+
+    &__input::placeholder {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .homePage {
+    padding-bottom: 12px;
+    &__movieList {
+      margin-bottom: 20px;
+      max-width: 964px;
+    }
+
+    &__movieItem {
+      width: 470px;
+      height: 244px;
+      margin: 0 8px 20px;
+    }
+
+    &__input::placeholder {
+      font-size: 16px;
+    }
+  }
 }

@@ -30,14 +30,37 @@
 
   <main>
     <!-- homePage.html     Осадчий    Онисько -->
-    <div class="homePage">
-      <form class="search-form js-search-form" id="search-form">
-        <input type="text" name="query" autocomplete="off" placeholder="Write movie name and click Enter" />
+    
+ <div class="homePage">
+      <form class="homePage__search-form js-search-form" id="search-form">
+        <div class="homePage__input-container">
+          <svg class="homePage__icon">
+        <use href="images/ico/symbol-defs.svg#icon-search-solid"></use>
+      </svg>
+        <input class="homePage__input" type="text" name="query" placeholder="Write movie name and click Enter" />
+        </div>
       </form>
-
-      <ul class="movie-gallery js-movie-gallery">
+      <!-- <p class="homePage__">Your input is incorrect.</p> -->
+      <ul class="homePage__movieList js-movie-gallery">
         <!-- Список <li> з карточками фільмів -->
+          <li class="homePage__movieItem"> 
+           </li> 
+           <li class="homePage__movieItem"> 
+           </li> 
+           <li class="homePage__movieItem"> 
+           </li> 
+           <li class="homePage__movieItem">
+            <p class="homePage__movieItem-name">test</p>
+          </li>
       </ul>
+
+      <div class="homePage__button">
+        <button class="homePage__btn">Prev</button>
+        <p class="homePage__btn">1</p>
+        <button class="homePage__btn homePage__btn--next">Next</button>
+      </div>
+    </div>
+
 
       <!-- Блок кнопок та номера сторінки -->
     </div>
@@ -57,7 +80,7 @@
   <!-- ! FOOTER -->
   <footer class="footer container">
     <div class="footer__info">
-      <span> Made by Gruop 6 </span>
+      <span> Made by Group 6 </span>
       <a href="#">Codeman</a>
     </div>
 
