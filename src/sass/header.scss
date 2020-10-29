@@ -118,21 +118,21 @@ a {
   }
 
   .site-menu--header {
-    margin-right: -120px;
+    margin-right: -840px;
   }
 }
 
 @media (min-width: 1024px) {
   .site-logo::before {
-    transform: translate(-286px, 20%);
+    transform: translate(-256px, 16%);
   }
 
   .logo-desc {
     position: relative;
-    left: -206px;
+    right: 180px;
   }
 
   .site-menu--header {
-    margin-right: -260px;
+    margin-right: -1160px;
   }
 }
