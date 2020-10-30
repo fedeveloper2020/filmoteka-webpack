@@ -12,65 +12,92 @@
 <body>
   <!-- ! HEADER Юрьєв-->
   <header class="header">
-    <div class="container">
-      <nav class="navigation header__navigation">
-        <a class="link site-logo" href="#">
-          <p class="logo-desc logo-desc__hidden">Filmoteka</p></a>
-        <ul class="list site-menu site-menu--header">
-          <li class="site-menu__item">
-            <a class="link site-menu__link" href="#">Home</a>
-          </li>
-          <li class="site-menu__item">
-            <a class="link site-menu__link" href="#">My library</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <!-- homePage.html     Осадчий    Онисько -->
-    
- <div class="homePage">
-      <form class="homePage__search-form js-search-form" id="search-form">
-        <div class="homePage__input-container">
-          <svg class="homePage__icon">
-        <use href="images/ico/homePage.svg#icon-search-solid"></use>
-      </svg>
-        <input class="homePage__input" type="text" name="query" placeholder="Write movie name and click Enter" />
-        </div>
-      </form>
-      <!-- <p class="homePage__">Your input is incorrect.</p> -->
-      <ul class="homePage__movieList js-movie-gallery">
-        <!-- Список <li> з карточками фільмів -->
-          <li class="homePage__movieItem"> 
-           </li> 
-           <li class="homePage__movieItem"> 
-           </li> 
-           <li class="homePage__movieItem"> 
-           </li> 
-           <li class="homePage__movieItem">
-            <p class="homePage__movieItem-name">test</p>
-          </li>
-      </ul>
-
-      <div class="homePage__button">
-        <button class="homePage__btn">Prev</button>
-        <p class="homePage__btn">1</p>
-        <button class="homePage__btn homePage__btn--next">Next</button>
+    <div class="tabs-1" id="tabs-1">
+      <!-- <div class="container controls" data-controls> -->
+        <nav class="navigation header__navigation">
+          <a class="link site-logo" href="#">
+           <p class="logo-desc logo-desc__hidden">Filmoteka</p></a>
+          <div class="controls" data-controls>
+            <!-- <ul class="list site-menu site-menu--header">
+              <li class="site-menu__item"> -->
+                <a class="link site-menu__link controls__item" href="#home">Home</a>
+            
+              <!-- </li>
+               <li class="site-menu__item"> -->
+                 <a class="link site-menu__link controls__item" href="#my-library">My library</a>
+               
+                 <!-- </li>
+            </ul> -->
+          </div>
+        </nav>
       </div>
+      </header>
+
+      <main>
+          <!-- homePage.html     Осадчий    Онисько -->
+    
+      <div class="panes homePage" data-panes>
+              <div class="pane" id="home">
+                  <form class="homePage__search-form js-search-form" id="search-form">
+                    <div class="homePage__input-container">
+                      <svg class="homePage__icon">
+                        <use href="images/ico/homePage.svg#icon-search-solid"></use>
+                      </svg>
+                      <input class="homePage__input" type="text" name="query" placeholder="Write movie name and click Enter" />
+                    </div>
+                  </form>
+                      <!-- <p class="homePage__">Your input is incorrect.</p> -->
+                    <ul class="homePage__movieList js-movie-gallery">
+                        <!-- Список <li> з карточками фільмів -->
+                        <li class="homePage__movieItem"> 
+                        </li> 
+                        <li class="homePage__movieItem"> 
+                          </li> 
+                        <li class="homePage__movieItem"> 
+                        </li> 
+                        <li class="homePage__movieItem">
+                          <p class="homePage__movieItem-name">test</p>
+                        </li>
+                    </ul> 
+
+                    <div class="homePage__button">
+                        <button class="homePage__btn">Prev</button>
+                        <p class="homePage__btn">1</p>
+                        <button class="homePage__btn homePage__btn--next">Next</button>
+                    </div>
+              </div>
+
+
+          <!-- Блок кнопок та номера сторінки -->
+          
+              <div class="pane" id="my-library">
+                <div class="tabs" id="tabs-2">
+                  <div class="controls" data-controls>
+                    <a href="#watched" class="controls__item">Watched</a>
+                    <a href="#queue" class="controls__item">Queue</a>
+                  </div>
+                  <div class="panes" data-panes>
+                    <div class="pane pane--active" id="watched">
+                      <ul class="watched">
+                        <li>Просмотренные</li>
+                      </ul>
+                    </div>
+                    <div class="pane" id="queue">
+                      <ul class="queue">
+                        <li>В очереди на просмотр</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+        </div>
     </div>
-
-
-      <!-- Блок кнопок та номера сторінки -->
-    </div>
-
     <!-- myFilmLibraryPage.html     Андрущенко -->
     <!-- Кнопки/таби - wached та queue -->
     <!-- Список wached <li> з карточками фільмів -->
     <!-- Список queue <li> з карточками фільмів -->
 <section class="details">
-        <div class="container">
+        <div class="container pane">
           <div class="details__img-wrapper">
               <img class="details-img" src="./images/details.png" alt="" />
             </picture> 
