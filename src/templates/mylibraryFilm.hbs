@@ -1,0 +1,14 @@
+  {{#each hits}} {{!--// дані по масиву пізніше поправлю --}}
+ <li class="mylibraryFilmList__item">
+          
+          <a class="mylibraryFilmList__link" href="#">
+            <img
+              class="mylibraryFilmList__image"
+              src="https://image.tmdb.org/t/p/w500/{{poster_path}}"
+              data-source="{{largeImageURL}}"
+              alt="imageFilm"
+            />
+          </a>
+          
+        </li>
+  {{/each}}
