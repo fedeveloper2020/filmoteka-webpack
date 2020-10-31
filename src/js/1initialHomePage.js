@@ -7,14 +7,15 @@ let inputValue = '';
 import noPoster from '../images/no-poster.png'
 
 const refs = {
-    searchForm: document.querySelector('#search-form'),
-    input: document.querySelector('.input-js'),
-    movieList: document.querySelector('.js-movieList'),
-    prevBtn: document.querySelector('[data-action="prev"]'),
-    nextBtn: document.querySelector('[data-action="next"]'),
-    pageValue: document.querySelector('.homePage__value'),
-    errorRef: document.querySelector('.error-message'),
-    title: document.querySelector('.title'),
+  searchForm: document.querySelector('#search-form'),
+  input: document.querySelector('.input-js'),
+  movieList: document.querySelector('.js-movieList'),
+  prevBtn: document.querySelector('[data-action="prev"]'),
+  nextBtn: document.querySelector('[data-action="next"]'),
+  pageValue: document.querySelector('.homePage__value'),
+  errorRef: document.querySelector('.error-message'),
+  title: document.querySelector('.title'),
+  buttonContainer: document.querySelector('.homePage__button'),
 }
 
 function createCardFunc(imgPath, filmTitle, movieId) {
@@ -74,10 +75,15 @@ function fetchFilms() {
     .then(data => data.json())
     .then(films => {
       if (films.results.length === 0) {
-        refs.errorRef.textContent = "There are no exact matches.";
+        refs.buttonContainer.classList.add('hidden');
+        refs.errorRef.textContent = "Sorry, but there are no exact matches :(";
+        clearContainer();
+
       }
       if (films.results.length > 1) {
-          refs.errorRef.textContent = "";
+        refs.buttonContainer.classList.remove('hidden');
+        clearContainer();
+        refs.errorRef.textContent = "";
       }
       films.results.forEach(film => {
         refs.movieList.insertAdjacentElement('beforeend', createCardFunc(film.backdrop_path, film.title, film.id))
@@ -91,18 +97,19 @@ function fetchFilms() {
 
 function handleSearchForm(event) {
   event.preventDefault();
+  pageNumber = 1;
+  refs.pageValue.textContent = pageNumber;
   inputValue = refs.input.value;
   refs.searchForm.reset();
   fetchFilms();
 }
-
-refs.searchForm.addEventListener('submit', handleSearchForm);
 
 function plaginationNavigation(event) {
     // зробити щоб на початку не було кнопки назад/disabled
   pageNumber === 1 || pageNumber < 1 ? refs.prevBtn.classList.add('hidden') : refs.prevBtn.classList.remove('hidden');
   if (event.target === refs.prevBtn) {
     pageNumber -= 1;
+    scrollToTop();
     refs.pageValue.textContent = pageNumber;
     if (inputValue === '') {
       fetchPopularMoviesList();
@@ -110,7 +117,8 @@ function plaginationNavigation(event) {
       fetchFilms();
     }
   } else {
-      pageNumber += 1;
+    pageNumber += 1;
+    scrollToTop();
     refs.pageValue.textContent = pageNumber;
     if (inputValue === '') {
       fetchPopularMoviesList();
@@ -125,8 +133,15 @@ function clearContainer() {
     refs.movieList.innerHTML = "";
 }
 
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+}
+
 
  refs.prevBtn.addEventListener('click', plaginationNavigation);
  refs.nextBtn.addEventListener('click', plaginationNavigation);
-
+ refs.searchForm.addEventListener('submit', handleSearchForm);
 
