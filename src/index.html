@@ -30,40 +30,31 @@
 
   <main>
     <!-- homePage.html     Осадчий    Онисько -->
-    
- <div class="homePage">
+           
+ <div class="homePage homePage-js">
       <form class="homePage__search-form js-search-form" id="search-form">
         <div class="homePage__input-container">
           <svg class="homePage__icon">
         <use href="images/ico/homePage.svg#icon-search-solid"></use>
       </svg>
-        <input class="homePage__input" type="text" name="query" placeholder="Write movie name and click Enter" />
+        <input class="homePage__input input-js" type="text" name="query" placeholder="Write movie name and click Enter" />
         </div>
       </form>
-      <!-- <p class="homePage__">Your input is incorrect.</p> -->
-      <ul class="homePage__movieList js-movie-gallery">
-        <!-- Список <li> з карточками фільмів -->
-          <li class="homePage__movieItem"> 
-           </li> 
-           <li class="homePage__movieItem"> 
-           </li> 
-           <li class="homePage__movieItem"> 
-           </li> 
-           <li class="homePage__movieItem">
-            <p class="homePage__movieItem-name">test</p>
-          </li>
+    </div>
+    <p class="hidden error-message">There are no exact matches.</p>
+  <h2 class="title">Most popular movies</h2>
+      <ul class="homePage__movieList js-movieList">
       </ul>
-
       <div class="homePage__button">
-        <button class="homePage__btn">Prev</button>
-        <p class="homePage__btn">1</p>
-        <button class="homePage__btn homePage__btn--next">Next</button>
+        <button class="homePage__btn" data-action="prev">Prev</button>
+        <span class="homePage__btn homePage__value">1</span>
+        <button class="homePage__btn homePage__btn--next" data-action="next">Next</button>
       </div>
     </div>
-
-
-      <!-- Блок кнопок та номера сторінки -->
     </div>
+
+
+
 
     <!-- myFilmLibraryPage.html     Андрущенко -->
     <div class="tabs-2">
