@@ -32,7 +32,7 @@ function searchFilms(event) {
     // form.reset();
 }
 
- function generatePopularFilmList() {
+function generatePopularFilmList() {
      apiService.fetchPopularMoviesList().then(data => {
          console.log(data);
          renderMarkup.generateMarkup(data);
@@ -48,8 +48,10 @@ function fetchFilms() {
         if (data.results.length === 0) {
             refs.buttonContainer.classList.add('hidden')
             refs.titleRef.classList.add('hidden');
-            refs.errorRef.classList.remove('hidden')
+            refs.errorRef.classList.remove('hidden');
+            return;
         }
+        refs.errorRef.classList.add('hidden');
         renderMarkup.generateMarkup(data);
         refs.titleRef.classList.add('hidden');
         plaginationNavigation(data.total_pages, data.page);
@@ -67,7 +69,9 @@ function onButtonClick() {
         generatePopularFilmList();
     }
 }
-onButtonClick()
+
+onButtonClick();
+
 
 function plaginationNavigation(event) {
     if (event.target === refs.nextBtn) {
