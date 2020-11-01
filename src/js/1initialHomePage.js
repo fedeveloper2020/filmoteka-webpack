@@ -5,18 +5,8 @@ let genres;
 let pageNumber = 1;
 let inputValue = '';
 import noPoster from '../images/no-poster.png'
-
-const refs = {
-  searchForm: document.querySelector('#search-form'),
-  input: document.querySelector('.input-js'),
-  movieList: document.querySelector('.js-movieList'),
-  prevBtn: document.querySelector('[data-action="prev"]'),
-  nextBtn: document.querySelector('[data-action="next"]'),
-  pageValue: document.querySelector('.homePage__value'),
-  errorRef: document.querySelector('.error-message'),
-  title: document.querySelector('.title'),
-  buttonContainer: document.querySelector('.homePage__button'),
-}
+import activeDetailsPage from './3navigation'
+import refs from './refs'
 
 function createCardFunc(imgPath, filmTitle, movieId) {
   const listItem = document.createElement('li');
@@ -38,7 +28,7 @@ function createCardFunc(imgPath, filmTitle, movieId) {
 
   listItem.append(img, title);
 
-//   listItem.addEventListener('click', () => activeDetailsPage(movieId, false));
+  listItem.addEventListener('click', () => activeDetailsPage(movieId, false));
   return listItem;
 };
 
@@ -46,6 +36,9 @@ const fetchPopularMoviesList = () => {
   fetch(`${baseURL}/movie/popular?api_key=${apiKey}&language=en-US&page=${pageNumber}`)
     .then(data => data.json())
     .then(films => {
+      // data = [...films]
+      // console.log(data);
+
       if (films.results.length > 1) {
           clearContainer();
       }
@@ -145,3 +138,4 @@ function scrollToTop() {
  refs.nextBtn.addEventListener('click', plaginationNavigation);
  refs.searchForm.addEventListener('submit', handleSearchForm);
 
+export { renderFilms, genres };

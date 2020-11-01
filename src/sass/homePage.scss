@@ -165,10 +165,14 @@
 
 @media (min-width: 1024px) {
   .homePage {
-    padding-bottom: 12px;
+    // padding-bottom: 12px;
+
     &__movieList {
       margin-bottom: 20px;
-      // max-width: 964px;
+      width: 980px;
+      margin: 0 auto 20px;
+      display: flex;
+      // align-items: center;
     }
 
     &__movieItem {
@@ -181,4 +185,17 @@
       font-size: 16px;
     }
   }
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }

@@ -1,0 +1,18 @@
+export default {
+    searchForm: document.querySelector('#search-form'),
+    input: document.querySelector('.input-js'),
+    movieList: document.querySelector('.js-movieList'),
+    prevBtn: document.querySelector('[data-action="prev"]'),
+    nextBtn: document.querySelector('[data-action="next"]'),
+    pageValue: document.querySelector('.homePage__value'),
+    errorRef: document.querySelector('.error-message'),
+    title: document.querySelector('.title'),
+    buttonContainer: document.querySelector('.homePage__button'),
+    homePage: document.querySelector('.homepage-section'),
+    detailsSectionBlock: document.querySelector('.details'),
+    queueBtn: document.querySelector('.js-details__queue'),
+    watchedBtn: document.querySelector('.js-details__watched'),
+    iconQueue: document.querySelector('.js-icon-queue'),
+    iconWatched: document.querySelector('.js-icon-watched'),
+    footerContainer: document.querySelector('.footer'),
+}
