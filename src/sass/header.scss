@@ -59,19 +59,6 @@ a {
   padding-right: 20px;
 }
 
-// .site-menu__link::after
-// .site-menu__link {
-//   margin-top: 12px;
-//   visibility: hidden;
-//   content: '';
-//   display: table;
-//   transform: translate(-35%);
-//   width: 122px;
-//   height: 2px;
-//   background-color: #372c48;
-//   position: absolute;
-// }
-
 .site-menu__link--active::after {
   visibility: visible;
   margin-top: 12px;
