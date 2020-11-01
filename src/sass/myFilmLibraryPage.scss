@@ -99,3 +99,23 @@
 .pane--active {
   display: block;
 }
+
+.lib-cont {
+  position: relative;
+}
+
+.underline--active::after {
+  visibility: visible;
+  margin-top: 12px;
+  content: '';
+  display: table;
+  transform: translate(-35%);
+  width: 122px;
+  height: 2px;
+  background-color: #372c48;
+  position: absolute;
+
+  .underline--active:last-of-type::after {
+    transform: translate(48%);
+  }
+}

@@ -99,42 +99,42 @@ function getPaneById(id) {
 // Second Tabs 
 
 const refs2 = {
-    controls: document.querySelector('#tabs-2 [data-controls]'),
-    panes: document.querySelector('#tabs-2 [data-panes]'),
+    controls2: document.querySelector('#tabs-2 [data-controls]'),
+    panes2: document.querySelector('#tabs-2 [data-panes]'),
 };
 
-console.log(refs2);
-
-refs2.controls.addEventListener('click', changeBottomTabs)
-    
-    function changeBottomTabs(event) {
+refs2.controls2.addEventListener('click', changeBottomTabs);
+function changeBottomTabs(event){
     event.preventDefault();
 
     if (event.target.nodeName !== "A") {
     return;
     }
 
-    const currentActiveControlItem2 = document.querySelector('.site-menu__link--active');
-    if (currentActiveControlItem2) {
-    currentActiveControlItem2.classList.remove('site-menu__link--active');
-    const paneId2 = getPaneId2(currentActiveControlItem2);
-    const pane2 = getPaneById2(paneId2);
-    pane2.classList.remove('pane--active');
-    }
+    const currentActivecontrolItem2 = refs2.controls2.querySelector(
+        '.underline--active',
+    ); 
 
+    if (currentActivecontrolItem2) {
+        currentActivecontrolItem2.classList.remove('underline--active');
+        const paneId2 = getPaneId2(currentActivecontrolItem2);
+        const pane2 = getPaneById2(paneId2);
+        // console.log(currentActivecontrolItem2);
+        pane2.classList.remove('pane--active');
+    }
     const controlItem2 = event.target;
-    controlItem2.classList.add('site-menu__link--active');
+    controlItem2.classList.add('underline--active');
+
+    const paneId2 = getPaneId2(controlItem2);
     
-    const paneId2 = getPaneId2(controlItem);
     const pane2 = getPaneById2(paneId2);
-        pane2.classList.add('pane--active');
-        console.log(pane2)
+    pane2.classList.add('pane--active');
 }
-    
-function getPaneId2(control) {
-    return control.getAttribute('href').slice(1);
+
+function getPaneId2(control2) {
+    return control2.getAttribute('href').slice(1)
 }
 
 function getPaneById2(id) {
-    return refs.panes.querySelector(`#${id}`)
-}
+    return refs2.panes2.querySelector(`#${id}`);
+   }
