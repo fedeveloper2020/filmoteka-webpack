@@ -36,7 +36,7 @@
       <main>
           <!-- homePage.html     Осадчий    Онисько -->
   <div class="panes homePage" data-panes>
-    <div class="pane" id="home">
+    <div class="pane pane--active" id="home">
     <div class="homepage-section">
         <div class="homePage homePage-js">
       <form class="homePage__search-form js-search-form" id="search-form">
@@ -66,9 +66,11 @@
                   </div>
                   <div class="panes lib-cont" data-panes>
                     <div class="pane" id="watched">
-                      <ul class="watched">
-                        <li>Просмотренные</li>
-                      </ul>
+                      <div class="library__button-container">
+                         <button id="js-buttonWatchedFilms" class="btn library__btn library__btn--watch library__btn--active">Watched</button>
+                         <button id="js-buttonQueueFilms" class="btn library__btn library__btn--queue">Queue</button>
+                      </div>
+                      <ul class="library-list library__filmList library__list--wached"></ul>
                     </div>
                     <div class="pane" id="queue">
                       <ul class="queue">

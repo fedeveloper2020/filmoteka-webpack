@@ -4,7 +4,7 @@ let renderFilms = [];
 let genres;
 let pageNumber = 1;
 let inputValue = '';
-import noPoster from '../images/no-poster.png'
+// import noPoster from '../images/no-poster.png'
 import activeDetailsPage from './3navigation'
 import refs from './refs'
 
@@ -36,8 +36,6 @@ const fetchPopularMoviesList = () => {
   fetch(`${baseURL}/movie/popular?api_key=${apiKey}&language=en-US&page=${pageNumber}`)
     .then(data => data.json())
     .then(films => {
-      // data = [...films]
-      // console.log(data);
 
       if (films.results.length > 1) {
           clearContainer();

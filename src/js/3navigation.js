@@ -1,5 +1,6 @@
 import showDetails from './4filmDetailsPage'
 import { renderFilms } from './1initialHomePage'
+import { drawQueueFilmList } from './5libraryPage'
 import refs from './refs';
 let selectFilm = [];
 
@@ -59,6 +60,7 @@ function changeBottomTabs(event){
         currentActivecontrolItem2.classList.remove('underline--active');
         const paneId2 = getPaneId2(currentActivecontrolItem2);
         const pane2 = getPaneById2(paneId2);
+        drawQueueFilmList();
         // console.log(currentActivecontrolItem2);
         pane2.classList.remove('pane--active');
     }

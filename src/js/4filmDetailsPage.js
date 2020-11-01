@@ -1,16 +1,6 @@
-import * as basicLightbox from 'basiclightbox';
 import 'basiclightbox/dist/basicLightbox.min.css';
-import detailsPageTpl from '../templates/detailsPage.hbs'
-import { data, genres } from './1initialHomePage'
+import { genres } from './1initialHomePage'
 import refs from './refs'
-
-// const refs = {
-//     detailsSectionBlock: document.querySelector('.details'),
-//     queueBtn: document.querySelector('.js-details__queue'),
-//     watchedBtn: document.querySelector('.js-details__watched'),
-//     iconQueue: document.querySelector('.js-icon-queue'),
-//     iconWatched: document.querySelector('.js-icon-watched'),
-// }
 
 function monitorButtonStatusText() {
   let localStorageFilmsQueue = localStorage.getItem('filmsQueue');
@@ -58,18 +48,6 @@ function toggleToQueue() {
     localStorage.setItem('filmsQueue', JSON.stringify(filmsInQueue));
     monitorButtonStatusText();
 }
-
-// function onOpenModel(event) {
-//     if (event.target.nodeName !== "IMG") {
-//         return;
-//     } else {
-//         const instance = basicLightbox.create(
-//         refs.detailsSectionBlock.insertAdjacentHTML('beforeend', detailsPageTpl(data))
-//         )
-//     }
-// }
-
-// document.querySelector('body').addEventListener('click', onOpenModel)
 
 export default function showDetails(selectFilm) {
     refs.detailsSectionBlock.innerHTML = "";
@@ -122,5 +100,5 @@ export default function showDetails(selectFilm) {
   }
 
 
-
+ 
 
