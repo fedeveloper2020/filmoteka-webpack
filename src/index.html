@@ -10,27 +10,34 @@
 </head>
 
 <body>
-  <!-- ! HEADER Юрьєв-->
+  <!-- ! HEADER Юрьєв -->
   <header class="header">
-    <div class="container">
-      <nav class="navigation header__navigation">
-        <a class="link site-logo" href="#">
-          <p class="logo-desc logo-desc__hidden">Filmoteka</p></a>
-        <ul class="list site-menu site-menu--header">
-          <li class="site-menu__item">
-            <a class="link site-menu__link" href="#">Home</a>
-          </li>
-          <li class="site-menu__item">
-            <a class="link site-menu__link" href="#">My library</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <!-- homePage.html     Осадчий    Онисько -->
-  <section class="homepage-section">
+    <div class="tabs-1" id="tabs-1">
+      <!-- <div class="container controls" data-controls> -->
+        <nav class="navigation header__navigation">
+          <a class="link site-logo" href="#">
+           <p class="logo-desc logo-desc__hidden">Filmoteka</p></a>
+          <div class="controls" data-controls>
+            <!-- <ul class="list site-menu site-menu--header">
+              <li class="site-menu__item"> -->
+                <a class="link site-menu__link controls__item" href="#home">Home</a>
+            
+              <!-- </li>
+               <li class="site-menu__item"> -->
+                 <a class="link site-menu__link controls__item" href="#my-library">My library</a>
+               
+                 <!-- </li>
+            </ul> -->
+          </div>
+        </nav>
+      </div>
+      </header>
+      <main>
+          <!-- homePage.html     Осадчий    Онисько -->
+    
+      <div class="panes homePage" data-panes>
+              <div class="" id="home">
+                  <section class="homepage-section">
      <div class="homePage homePage-js">
       <form class="homePage__search-form js-search-form" id="search-form">
         <div class="homePage__input-container">
@@ -54,13 +61,38 @@
     </div>
   </section>       
 
+              </div>
 
 
-
+          <!-- Блок кнопок та номера сторінки -->
+          
+              <div class="pane" id="my-library">
+                <div class="tabs" id="tabs-2">
+                  <div class="controls" data-controls>
+                    <a href="#watched" class="controls__item underline--active">Watched</a>
+                    <a href="#queue" class="controls__item underline--active">Queue</a>
+                  </div>
+                  <div class="panes lib-cont" data-panes>
+                    <div class="pane" id="watched">
+                      <ul class="watched">
+                        <li>Просмотренные</li>
+                      </ul>
+                    </div>
+                    <div class="pane" id="queue">
+                      <ul class="queue">
+                        <li>В очереди на просмотр</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+        </div>
+    </div>
+  <main>
     <!-- myFilmLibraryPage.html     Андрущенко -->
     <!-- Кнопки/таби - wached та queue -->
     <!-- Список wached <li> з карточками фільмів -->
-    <!-- Список queue <li> з карточками фільмів -->
+    <!-- Список queue <li> з карточками фільмів -->    
 <section class="details"></section>
  <!-- доробити стилі -->
   </main>
