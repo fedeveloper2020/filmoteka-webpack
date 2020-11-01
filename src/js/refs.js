@@ -15,4 +15,6 @@ export default {
     iconQueue: document.querySelector('.js-icon-queue'),
     iconWatched: document.querySelector('.js-icon-watched'),
     footerContainer: document.querySelector('.footer'),
+    controls: document.querySelector('#tabs-1 [data-controls]'),
+    panes: document.querySelector('[data-panes]'),
 }

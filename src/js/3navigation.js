@@ -2,12 +2,6 @@ import showDetails from './4filmDetailsPage'
 import { renderFilms } from './1initialHomePage'
 import refs from './refs';
 let selectFilm = [];
-const refs = {
-    controls: document.querySelector('#tabs-1 [data-controls]'),
-    panes: document.querySelector('[data-panes]'),
-};
-
-console.log(refs);
 
 refs.controls.addEventListener('click', changeTopTabs)
     
