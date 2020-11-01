@@ -32,39 +32,35 @@
         </nav>
       </div>
       </header>
-
       <main>
           <!-- homePage.html     Осадчий    Онисько -->
     
       <div class="panes homePage" data-panes>
               <div class="" id="home">
-                  <form class="homePage__search-form js-search-form" id="search-form">
-                    <div class="homePage__input-container">
-                      <svg class="homePage__icon">
-                        <use href="images/ico/homePage.svg#icon-search-solid"></use>
-                      </svg>
-                      <input class="homePage__input" type="text" name="query" placeholder="Write movie name and click Enter" />
-                    </div>
-                  </form>
-                      <!-- <p class="homePage__">Your input is incorrect.</p> -->
-                    <ul class="homePage__movieList js-movie-gallery">
-                        <!-- Список <li> з карточками фільмів -->
-                        <li class="homePage__movieItem"> 
-                        </li> 
-                        <li class="homePage__movieItem"> 
-                          </li> 
-                        <li class="homePage__movieItem"> 
-                        </li> 
-                        <li class="homePage__movieItem">
-                          <p class="homePage__movieItem-name">test</p>
-                        </li>
-                    </ul> 
+                  <section class="homepage-section">
+     <div class="homePage homePage-js">
+      <form class="homePage__search-form js-search-form" id="search-form">
+        <div class="homePage__input-container">
+          <svg class="homePage__icon">
+        <use href="images/ico/homePage.svg#icon-search-solid"></use>
+      </svg>
+        <input class="homePage__input input-js" type="text" name="query" placeholder="Write movie name and click Enter" />
+        </div>
+      </form>
+    </div>
+    <p class="error-message"></p>
+  <h2 class="title">Most popular movies</h2>
+      <ul class="homePage__movieList js-movieList">
+      </ul>
+      <div class="homePage__button">
+        <button class="homePage__btn" data-action="prev">Prev</button>
+        <span class="homePage__btn homePage__value">1</span>
+        <button class="homePage__btn homePage__btn--next" data-action="next">Next</button>
+      </div>
+    </div>
+    </div>
+  </section>       
 
-                    <div class="homePage__button">
-                        <button class="homePage__btn">Prev</button>
-                        <p class="homePage__btn">1</p>
-                        <button class="homePage__btn homePage__btn--next">Next</button>
-                    </div>
               </div>
 
 
@@ -92,65 +88,13 @@
               </div>
         </div>
     </div>
+  <main>
     <!-- myFilmLibraryPage.html     Андрущенко -->
     <!-- Кнопки/таби - wached та queue -->
     <!-- Список wached <li> з карточками фільмів -->
-    <!-- Список queue <li> з карточками фільмів -->
-<section class="details">
-        <div class="container pane">
-          <div class="details__img-wrapper">
-              <img class="details-img" src="./images/details.png" alt="" />
-            </picture> 
-          </div>
-          <div class="details__description">
-            <h2 class="details__titile">Dumbo (2019)</h2>
-            <ul class="details-list">
-              <li class="details-list__item">
-                <p class="details-list__name">vote / votes</p>
-                <p class="details-list__desc details__rating">
-                  <span class="details-list__rating">6.5 </span>
-                  <span class="details-list__rating--dash"> / </span>
-                  <span class="details-list__rating"> 1422</span>
-                </p>
-              </li>
-              <li class="details-list__item">
-                <p class="details-list__name">popularity</p>
-                <p class="details-list__desc">100.2</p>
-              </li>
-              <li class="details-list__item">
-                <p class="details-list__name">original title</p>
-                <p class="details-list__desc">Dumbo</p>
-              </li>
-              <li class="details-list__item">
-                <p class="details-list__name">genre</p>
-                <p class="details-list__desc">
-                  <span>drama, geography, history</span>
-                </p>
-              </li>
-            </ul>
-            <h3 class="details-list__about">About</h3>
-            <p class="details__text">
-              A young elephant, whose oversized ears enable him to fly, helps
-              save a struggling circus, but when the circus plans a new venture,
-              Dumbo and his friends discover dark secrets beneath its shiny
-              veneer.
-            </p>
-        <svg class="details__icon">
-        <use href="images/ico/details.svg#icon-video-solid"></use>
-      </svg>
-            <button class="details__watched">Add to watched</button>
-      <svg class="details__icon">
-        <use href="images/ico/details.svg#icon-calendar"></use>
-      </svg>
-            <button class="details__queue">Add to queue</button>
-          </div>
-        </div>
-      </section>
-    <!-- detailsPage.html     Таран -->
-    <!-- Розмітка даних фільму (фото, назва, голоси, оцінка і т.д) -->
-    <!-- Блок з 4х кнопок: 
-      - додати / видалити переглянуті
-      - додати / видалити в чергу на перегляд -->
+    <!-- Список queue <li> з карточками фільмів -->    
+<section class="details"></section>
+ <!-- доробити стилі -->
   </main>
 
   <!-- ! FOOTER -->
