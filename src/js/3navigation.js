@@ -5,7 +5,7 @@ let selectFilm = [];
 
 refs.controls.addEventListener('click', changeTopTabs)
     
-    function changeTopTabs(event) {
+function changeTopTabs(event) {
     event.preventDefault();
 
     if (event.target.nodeName !== "A") {
@@ -35,6 +35,7 @@ function getPaneId(control) {
 function getPaneById(id) {
     return refs.panes.querySelector(`#${id}`)
 }
+
 // Second Tabs 
 
 const refs2 = {
