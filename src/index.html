@@ -53,32 +53,26 @@
     </div>
     </div>
 
-
-
-
     <!-- myFilmLibraryPage.html     Андрущенко -->
-    <div class="tabs-2">
-      <!-- Кнопки/таби - wached та queue -->
-      <div class="controls">
-        <btn>
-        <btn>
-      </div>
-      <div class="panes">
-        <div class="pane">
+    <div class="pane myFilmLibraryPage" id="my-library">
+      <div class="tabs" id="tabs-2">
+        <!-- Кнопки/таби - wached та queue -->
+        <div class="controls" data-controls>
+          <a href="#watched" class="controls__item">Watched</a>
+          <a href="#queue" class="controls__item">Queue</a>
+        </div>
+        
+        <div class="panes" data-panes>
           <!-- Список wached <li> з карточками фільмів -->
-          <ul class="library js-w"></ul>
-        </div>
-        <div class="pane">
+          <div class="pane" id="watched">
+            <ul class="watched js-watched-list-film"></ul>
+          </div>
           <!-- Список queue <li> з карточками фільмів -->
-          <ul class="queue"></ul>
+          <div class="queue">
+            <ul class="queue"></ul>
+          </div>
         </div>
       </div>
-    </div>
-    
-    
-    
-<section class="details">
-        <div class="container">
           <div class="details__img-wrapper">
               <img class="details-img" src="./images/details.png" alt="" />
             </picture> 

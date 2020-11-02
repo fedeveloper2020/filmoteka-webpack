@@ -1,16 +1,16 @@
-  {{#each hits}} {{!--// дані по масиву пізніше поправлю --}}
- <li class="mylibraryFilmList__item">
-          
+ {{#each results }} 
+        <li class="mylibraryFilmList__item"></li>
           <a class="mylibraryFilmList__link" href="#">
             <img
               class="mylibraryFilmList__image"
               src="https://image.tmdb.org/t/p/w500/{{poster_path}}"
-              data-source="{{largeImageURL}}"
+              data-source="{{homepage}}"
               alt="imageFilm"
             />
           </a>
-          <h2></h2>
-          <h2></h2>
+          <h2>{{title}}</h2>
+          <h3>{{vote_average}}</h3>
           
         </li>
-  {{/each}}
+ {{/each}}
+ {{!--// дані по масиву пізніше поправлю --}}
