@@ -10,28 +10,35 @@
 </head>
 
 <body>
-  <!-- ! HEADER Юрьєв-->
+  <!-- ! HEADER Юрьєв -->
   <header class="header">
-    <div class="container">
-      <nav class="navigation header__navigation">
-        <a class="link site-logo" href="#">
-          <p class="logo-desc logo-desc__hidden">Filmoteka</p></a>
-        <ul class="list site-menu site-menu--header">
-          <li class="site-menu__item">
-            <a class="link site-menu__link" href="#">Home</a>
-          </li>
-          <li class="site-menu__item">
-            <a class="link site-menu__link" href="#">My library</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <div class="tabs-1" id="tabs-1">
+      <div class="container controls" data-controls>
+        <nav class="navigation header__navigation">
+          <a class="link site-logo" href="#">
+           <p class="logo-desc logo-desc__hidden">Filmoteka</p></a>
+          <div class="controls" data-controls>
+            <!-- <ul class="list site-menu site-menu--header">
+              <li class="site-menu__item"> -->
+                <a class="link site-menu__link controls__item site-menu__link--active" href="#home">Home</a>
+            
+              <!-- </li>
+               <li class="site-menu__item"> -->
+                 <a class="link site-menu__link controls__item" href="#my-library">My library</a>
+               
+                 <!-- </li>
+            </ul> -->
+          </div>
+        </nav>
+      </div>
+      </header>
 
-  <main>
-    <!-- homePage.html     Осадчий    Онисько -->
-           
- <div class="homePage homePage-js">
+      <main>
+          <!-- homePage.html     Осадчий    Онисько -->
+  <div class="panes homePage" data-panes>
+    <div class="pane pane--active" id="home">
+    <div class="homepage-section">
+        <div class="homePage homePage-js">
       <form class="homePage__search-form js-search-form" id="search-form">
         <div class="homePage__input-container">
           <svg class="homePage__icon">
@@ -41,10 +48,9 @@
         </div>
       </form>
     </div>
-    <p class="hidden error-message">There are no exact matches.</p>
-  <h2 class="title">Most popular movies</h2>
-      <ul class="homePage__movieList js-movieList">
-      </ul>
+    <p class="error-message"></p>
+    <h2 class="title">Most popular movies</h2>
+      <ul class="homePage__movieList js-movieList"></ul>
       <div class="homePage__button">
         <button class="homePage__btn" data-action="prev">Prev</button>
         <span class="homePage__btn homePage__value">1</span>
@@ -53,26 +59,6 @@
     </div>
     </div>
 
-    <!-- myFilmLibraryPage.html     Андрущенко -->
-    <div class="pane myFilmLibraryPage" id="my-library">
-      <div class="tabs" id="tabs-2">
-        <!-- Кнопки/таби - wached та queue -->
-        <div class="controls" data-controls>
-          <a href="#watched" class="controls__item">Watched</a>
-          <a href="#queue" class="controls__item">Queue</a>
-        </div>
-        
-        <div class="panes" data-panes>
-          <!-- Список wached <li> з карточками фільмів -->
-          <div class="pane" id="watched">
-            <ul class="watched js-watched-list-film"></ul>
-          </div>
-          <!-- Список queue <li> з карточками фільмів -->
-          <div class="queue">
-            <ul class="queue"></ul>
-          </div>
-        </div>
-      </div>
           <div class="details__img-wrapper">
               <img class="details-img" src="./images/details.png" alt="" />
             </picture> 
@@ -126,17 +112,74 @@
     <!-- Блок з 4х кнопок: 
       - додати / видалити переглянуті
       - додати / видалити в чергу на перегляд -->
+              <div class="pane" id="my-library">
+                <div class="tabs" id="tabs-2">
+                  <div class="controls" data-controls>
+                    <a href="#watched" class="controls__item underline--active">Watched</a>
+                    <a href="#queue" class="controls__item underline--active">Queue</a>
+                  </div>
+                  <div class="panes lib-cont" data-panes>
+                    <div class="pane" id="watched">
+                       <ul class="watched">
+                        <li>Просмотренные</li>
+                      </ul>
+                    </div>
+                    <div class="pane" id="queue">
+                      <ul class="queue">
+                        <li>В очереди на просмотр</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+        </div>
+    <!-- </div> -->
+  <!-- <main> -->
+    <!-- myFilmLibraryPage.html     Андрущенко -->
+    <!-- Кнопки/таби - wached та queue -->
+    <!-- Список wached <li> з карточками фільмів -->
+    <!-- Список queue <li> з карточками фільмів -->   
+     
+
+    <!-- myFilmLibraryPage.html     Андрущенко -->
+    <div class="pane myFilmLibraryPage" id="my-library">
+      <div class="tabs" id="tabs-2">
+        <!-- Кнопки/таби - wached та queue -->
+        <div class="controls" data-controls>
+          <a href="#watched" class="controls__item">Watched</a>
+          <a href="#queue" class="controls__item">Queue</a>
+        </div>
+        
+        <div class="panes" data-panes>
+          <!-- Список wached <li> з карточками фільмів -->
+          <div class="pane" id="watched">
+            <ul class="watched js-watched-list-film"></ul>
+          </div>
+          <!-- Список queue <li> з карточками фільмів -->
+          <div class="queue">
+            <ul class="queue"></ul>
+          </div>
+        </div>
+      </div> 
+<section class="details">
+  <div class="pane">
+
+  </div>
+</section>
+ <!-- доробити стилі -->
+
   </main>
 
   <!-- ! FOOTER -->
-  <footer class="footer container">
-    <div class="footer__info">
-      <span> Made by Group 6 </span>
-      <a href="#">Codeman</a>
+   <footer class="footer">
+    <div class="footer__info container">
+      <p class="foot-desc"> Made by <a href="#">"Codeman"</a> </p>
+      <div class="btn-up"><span class="arrow"></span></div>
     </div>
-
       <!-- Кнопка наверх -->
+      
   </footer>
+
 
 </body>
 

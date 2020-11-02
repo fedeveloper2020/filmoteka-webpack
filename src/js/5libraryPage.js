@@ -1,3 +1,4 @@
+
 console.log('File 5libraryPage.js connected');
 
 import li_itemTPL from '../templates/li_templete.hbs';
@@ -70,3 +71,4 @@ const drawWatchedFilmList = () => {
     //кнопка активна   queueListButton.classList.add('класс');
     //кнопка не активна   watchedListButton.classList.remove('класс');
   };
+
